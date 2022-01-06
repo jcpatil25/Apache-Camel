@@ -31,6 +31,7 @@ public class RestToCXFServicesRoutBuilder extends RouteBuilder {
 		.log("cxf route-1 ${body}")
 		.setBody(constant(12))
 		.bean(StudentBuilder.class)
+		.bean(WebServiceTimeout.class)
 		.log("cxf route-1 ${body}")
 		.setHeader(CxfConstants.OPERATION_NAME, constant("GetStudentDetails"))
 		.setHeader(CxfConstants.OPERATION_NAMESPACE, constant("http://jitus.com/students"))

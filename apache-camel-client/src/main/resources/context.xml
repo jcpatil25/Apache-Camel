@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:camel-cxf="http://camel.apache.org/schema/cxf"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:http-conf="http://cxf.apache.org/transports/http/configuration"
+	xsi:schemaLocation="
+	http://cxf.apache.org/transports/http/configuration
+    http://cxf.apache.org/schemas/configuration/http-conf.xsd
+	http://www.springframework.org/schema/beans 
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	 http://camel.apache.org/schema/spring
+	  https://camel.apache.org/schema/spring/camel-spring.xsd 
+	  http://camel.apache.org/schema/cxf
+	   http://camel.apache.org/schema/cxf/camel-cxf.xsd">
+	
+	<http-conf:conduit name="*.http-conduit">
+		<http-conf:client ConnectionTimeout="10000" ReceiveTimeout="10000"></http-conf:client>
+	</http-conf:conduit>
+	
+</beans>
