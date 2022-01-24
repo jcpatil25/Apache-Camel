@@ -22,7 +22,7 @@ public class StudentDetailsEndpoint {
 		studentDetails.setName("Jitendra");
 		studentDetails.setPassportNumber("J1234567");
 //		studentDetails.setESRNumber("ESRNumber-1");
-		try{Thread.sleep(70000);}catch(Exception e) {e.printStackTrace();}
+//		try{Thread.sleep(1000);}catch(Exception e) {e.printStackTrace();}
 		response.setStudentDetails(studentDetails);
 		
 		return response;
